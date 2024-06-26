@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="gestion-compras-container">
+    <h2 class="gestion-compras-header">Gestión de Compras</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Comprador</th>
+                <th>Fecha</th>
+                <th>Método de Pago</th>
+                <th>Productos</th>
+                <th>Total Pagado</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for compra in compras %}
+            <tr>
+                <td>{{ compra.usuario.nombre_usuario if compra.usuario else 'Desconocido' }}</td>
+                <td>{{ compra.fecha }}</td>
+                <td>{{ compra.metodo_pago }}</td>
+                <td>
+                    <ul>
+                        {% for detalle in compra.detalles %}
+                        <li>{{ detalle.producto.nombre if detalle.producto else 'Producto Desconocido' }} - Cantidad: {{ detalle.cantidad }} - Precio: ${{ detalle.precio }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+                <td>${{ compra.total }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
