@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfil de Usuario</title>
+<style>
+  body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background-color: #f0f0f0; }
+  .perfil { background-color: #e0e0e0; /* color plomo claro */ width: 100%; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); margin: 0 auto; text-align: center; box-sizing: border-box; }
+  .perfil h1 { color: #5e35b1; /* color morado */ margin-bottom: 20px; font-size: 2em; }
+  .perfil img { width: 100%; max-width: 200px; height: auto; margin-bottom: 20px; }
+  .perfil .opciones { list-style: none; padding: 0; }
+  .perfil .opciones li { padding: 10px; background-color: #ffffff; margin-bottom: 10px; border-radius: 5px; transition: background-color 0.3s; }
+  .perfil .opciones li:hover { background-color: #f5f5f5; }
+  .perfil .opciones li a { text-decoration: none; color: #333; font-weight: bold; }
+  .perfil .boton-social { display: inline-block; margin-right: 10px; }
+  .perfil .boton-social img { width: 32px; height: 32px; }
+  .perfil button { background-color: #5e35b1; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; }
+  .perfil button:hover { background-color: #512da8; }
+  @keyframes rgb-border {
+  0% { border-color: #ff0000; }
+  33% { border-color: #00ff00; }
+  66% { border-color: #0000ff; }
+  100% { border-color: #ff0000; }
+}
+
+.perfil .opciones li {
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+  border: 3px solid #ff0000; /* Color inicial del borde */
+  animation: rgb-border 3s linear infinite;
+}
+
+/* Asegúrate de incluir esta animación dentro de tu bloque de estilos CSS */
+
+</style>
+</head>
+<body>
+<div class="perfil">
+  <h1>PANDA</h1>
+  <img src="ruta-a-la-imagen-del-panda.jpg" alt="Logo de PANDA">
+  <ul class="opciones">
+    <li><a href="#">WhatsApp</a></li>
+    <li><a href="#">Discord</a></li>
+    <li><a href="#">YouTube</a></li>
+  </ul>
+  <div>
+    <a href="#" class="boton-social"><img src="icono-whatsapp.png" alt="WhatsApp"></a>
+    <a href="#" class="boton-social"><img src="icono-discord.png" alt="Discord"></a>
+    <a href="#" class="boton-social"><img src="icono-youtube.png" alt="YouTube"></a>
+  </div>
+  <button>Subscribe</button>
+</div>
+</body>
+</html>
